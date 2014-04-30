@@ -52,6 +52,9 @@ Run in the root directory of your workspace:
 
 sudo might be needed on some systems like OSX. This will download and setup the development listed in your `package.json` file. As a result you'll get a folder 'node_modules' being created.
 
+Note: 
+watch your console for errors during `npm install` to ensure you get a working installation.
+
 
 #### 3. initialize Bower
 
