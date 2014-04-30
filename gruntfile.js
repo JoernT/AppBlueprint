@@ -66,6 +66,9 @@ module.exports = function (grunt) {
             }
         },
 
+        /*
+        Copy copies all relevant files for building a distribution in 'dist' directory
+        */
         // CSS and JS resources are copied as they get processed by their respective optimization tasks later in the chain.
         // png images will not be copied as they will get optimized by imagemin
         copy: {
@@ -73,14 +76,13 @@ module.exports = function (grunt) {
                 files: [
                     {expand: true,
                         cwd: './',
-                        src: ['components/*', 'resources/img/**', 'templates/**', '*.xql', '*.xml', '*.txt', '*.ico', '*.html'],
+                        src: ['modules/**','resources/img/**', 'templates/**', '*.xql', '*.xml', '*.txt', '*.ico', '*.html'],
                         dest: 'dist/'},
-
                     {expand: true,
                         cwd: './',
                         flatten: true,
                         src: ['components/font-awesome/fonts/**'],
-                        dest: 'dist/fonts/',
+                        dest: 'dist/resources/fonts/',
                         filter: 'isFile'
                     }
                 ]
@@ -159,7 +161,7 @@ module.exports = function (grunt) {
                     strictImports:true
                 },
                 files: {
-                    "dist/resources/css/styles.css": "resources/css/styles.less"
+                    "resources/css/styles.css": "resources/css/styles.less"
                 }
             }
         },
@@ -174,7 +176,7 @@ module.exports = function (grunt) {
                 flatten: true
             },
             dist: {
-                src: ['./templates/page.html'],
+                src: ['./index.html'],
                 dest: 'resources/css/tidy.css'
             }
         },
@@ -196,23 +198,6 @@ module.exports = function (grunt) {
         },
 
         /*
-        This task will replace CSS and JS imports in the main html file to point to the optimized versions instead
-        of linking into 'components'
-        */
-        processhtml: {
-            dist: {
-                options: {
-                    data: {
-                        minifiedCss: '<link href="resources/css/app.min.css" rel="stylesheet"/>'
-                    }
-                },
-                files: {
-                    'dist/templates/page.html': ['templates/page.html']
-                }
-            }
-        },
-
-        /*
          Gives statistical information about CSS compression results
          */
         compare_size: {
@@ -220,6 +205,23 @@ module.exports = function (grunt) {
                 'resources/css/*.css',
                 'dist/resources/css/app.min.css'
             ]
+        },
+
+        /*
+        This task will replace CSS and JS imports in the main html file to point to the optimized versions instead
+        of linking into 'components'
+        */
+        processhtml: {
+            dist: {
+                options: {
+                    data: {
+                        minifiedCss: '<link href="resources/css/app.min.css" type="text/css" rel="stylesheet"/>'
+                    }
+                },
+                files: {
+                    'dist/index.html': ['./index.html']
+                }
+            }
         },
 
         /*
@@ -245,11 +247,12 @@ module.exports = function (grunt) {
                     'components/jquery/dist/**',
                     'components/snap.svg/dist/**'
                 ],
-                dest: 'build/<%=xar.name%>-<%=xar.version%>.xar'
+                dest: 'build/<%=xar.name%>-<%=xar.version%>.zip'
             },
             production: {
+                cwd: 'dist/',
                 src: ['dist/**'],
-                dest: 'build/<%=xar.name%>-<%=xar.version%>.min.xar'
+                dest: 'build/<%=xar.name%>-<%=xar.version%>.min.zip'
             }
         },
 
@@ -283,8 +286,8 @@ module.exports = function (grunt) {
         'concat',
         'uncss',
         'cssmin',
-        'processhtml',
         'compare_size',
+        'processhtml',
         'zip:production'
     ]);
 
