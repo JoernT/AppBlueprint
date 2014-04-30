@@ -1,7 +1,7 @@
 {
-  "name": "existsite",
-  "version": "2.2.3",
-  "description": "This is the eXistdb site template",
+  "name": "AppBlueprint",
+  "version": "0.0.1",
+  "description": "Blueprint for building eXistdb xar applications",
   "main": "resources/js/app.js",
   "directories": {
     "doc": "doc"
@@ -26,6 +26,7 @@
     "grunt-zip": "~0.13.0",
     "grunt-text-replace": "~0.3.11",
     "grunt-uncss": "~0.3.3",
-    "bower": "~1.3.3"
+    "bower": "~1.3.3",
+    "grunt-contrib-less": "~0.11.0"
   }
 }

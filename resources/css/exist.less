@@ -67,12 +67,31 @@ h1,h2,h3,h4,h5,h6,page-header{
   font-family: 'Quicksand', sans-serif;
   color:@gray1;
 }
+h1{
+    font-size:56px;
+}
+h2{
+    font-size:42px;
+}
+h3{
+    font-size:34px;
+}
+h4{
+    font-size:28px;
+}
+h5{
+    font-size:24px;
+}
+h6{
+    font-size:20px;
+}
+
 section{
   margin: 80px 0;
 }
 
 p,li{
-  color:@gray4;
+  color:@gray1;
   letter-spacing:0.1em;
   font-family:'Open Sans', sans-serif;
   line-height:1.4;
@@ -85,9 +104,8 @@ p,li{
   padding-top: 60px;
 
   h1 {
-    color: @gray2;
     text-align: center;
-    font-size: 371.4%;
+    font-size: 68px;
   }
 }
 
@@ -419,8 +437,9 @@ p,li{
 /* ++++++++++ end of media object overwrites ++++++++++ */
 
 footer{
-  height:auto;
+  float:left;
   background: @gray1;
+  width:100%;
 
   *{
     color:@gray5;
@@ -443,6 +462,7 @@ footer{
   color:white;
   float:right;
   font-size:0.8em;
+  padding:0 20px;
 }
 
 /* ++++++++++ media queries  ++++++++++ */
@@ -450,9 +470,6 @@ footer{
 /* ++++++++++ media queries  ++++++++++ */
 @media (max-width: @screen-xs-max) {
 
-  body{
-    padding-top:50px;
-  }
   .navbar, .navbar-static-top {
     background: rgba(239, 239, 239, 1.0);
   }
@@ -476,7 +493,7 @@ footer{
   .container .jumbotron {
     padding: 60px 30px;
     h1 {
-      font-size: 44px;
+      font-size: 64px;
     }
   }
 
