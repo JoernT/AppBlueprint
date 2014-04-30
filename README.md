@@ -125,4 +125,4 @@ You should consult the `gruntfile.js` for details.
 
 The grunt build tool uses `uncss`- a tool to discover and remove unused CSS classes from the resulting CSS. However this statically analyses one or more html pages. When JS routines dynamically add classes to the DOM at runtime these cannot be detected by `uncss`. Such classes can be held in a separate css file for instance.
 
-Dynamic behavior should always be tested after optimization.ion.
+Dynamic behavior should always be tested after optimization.
