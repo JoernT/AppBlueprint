@@ -46,7 +46,7 @@ Refer to their homepage for a OS-specific installer for your system.
 ** Note: **
 Grunt will install all tools needed for development - runtime dependencies of your website or app will be handled by bower (see below).
 
-Run:
+Run in the root directory of your workspace:
 
 `(sudo) npm install` 
 
