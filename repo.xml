@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<meta xmlns="http://exist-db.org/xquery/repo">
+    <description>A template site for unifying all eXist websites</description>
+    <author>Joern Turner</author>
+    <website/>
+    <status>alpha</status>
+    <license>GNU-LGPL</license>
+    <copyright>true</copyright>
+    <type>application</type>
+    <target>existsite</target>
+    <prepare>pre-install.xql</prepare>
+    <finish/>
+    <deployed>2014-03-19T17:36:44.584+01:00</deployed>
+</meta>
