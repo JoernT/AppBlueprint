@@ -2,7 +2,7 @@
 
 App Blueprint serves as a template for building XAR applications with the help of GruntJS.
 
-Developed as a styleguide page for the various eXist websites it uses a set of common features and libraries:
+Originally developed as a styleguide page for the various eXist websites it has been generalized uses a set of common features and libraries:
 
 * Bootstrap 3 (responsive layout + common styling)
 * JQuery (JS)
@@ -16,9 +16,9 @@ App Blueprint replaces the older Ant build scripts required for building .xar fi
 
 Building state-of-the-art html pages requires the use of many tools today to offer an optimal experience for the user. Unfortunately this comes with a lot of new responsibilities for the web developer to make sure that the CSS, JavaScript and whatever technologies work across the widest range of devices.
 
-Typically to address all these needs it is necessary to work with CSS and Javascript libraries that ensure a base level of quality in terms of cross-browser and device-compatility.
+Typically to address all these needs it is necessary to work with CSS and Javascript libraries that ensure a base level of quality in terms of cross-browser and device-compatibility.
 
-Modern web tooling like nodejs, gruntjs and bower help to address these requirements. App Blueprint provides a grunt-based approach to developing .xar applications that help to automate a lot of the common tasks.
+Modern web tooling like nodejs, gruntjs and bower help to address these requirements. App Blueprint provides a grunt-based approach to developing .xar applications that helps to automate a lot of the common tasks.
 
 Instead of setting up your environment over and over again for each project App Blueprint offers a complete, feature-rich template to copy and modify to your needs.
 
@@ -27,7 +27,7 @@ Features:
 * removal of unused CSS
 * CSS minification (single file output)
 * JS concatenation and minification (single file output)
-* Image optimization
+* Image optimization for png images
 * Dependency management for the components of your site/app
 * creation of optimized and non-optimized .xar files
 
@@ -53,7 +53,7 @@ Run in the root directory of your workspace:
 sudo might be needed on some systems like OSX. This will download and setup the development listed in your `package.json` file. As a result you'll get a folder 'node_modules' being created.
 
 Note: 
-watch your console for errors during `npm install` to ensure you get a working installation.
+watch your console for errors during `npm install` to ensure you get a working installation. Sometimes administrator rights are needed for a correct install.
 
 
 #### 3. initialize Bower
@@ -126,3 +126,12 @@ You should consult the `gruntfile.js` for details.
 The grunt build tool uses `uncss`- a tool to discover and remove unused CSS classes from the resulting CSS. However this statically analyses one or more html pages. When JS routines dynamically add classes to the DOM at runtime these cannot be detected by `uncss`. Such classes can be held in a separate css file for instance.
 
 Dynamic behavior should always be tested after optimization.
+
+## Possible future enhancements
+
+* adding test infrastructure to run JavaScript unit tests
+* image optimization for gif and jpeg images 
+* automatic re-deployment into database
+* live editing feature
+* integration into eXide
+* 
