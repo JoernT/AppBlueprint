@@ -86,7 +86,7 @@ If you are seeking detail information about the single targets please refer to `
 
 ### Change name, version and description of the app
 
-Variables for the build process can be defined in `package.json`. You should adapt the values for name, version and description fields
+Variables for the build process can be defined in `package.json`. You should adapt the values for name, version and description.
 
 ### Optimizing JavaScript
 
