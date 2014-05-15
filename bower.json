@@ -1,10 +1,4 @@
 {
-    "name": "existdb.org",
-    "version": "0.0.0",
-    "authors": [
-        "JoernT <joern.turner@betterform.de>"
-    ],
-    "license": "MIT",
     "ignore": [
         "**/.*",
         "node_modules",
