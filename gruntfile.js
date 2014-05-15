@@ -46,9 +46,9 @@ module.exports = function (grunt) {
          replaces tokens in expath-pkg.tmpl and creates expath-pkg.xml with substituted values
          */
         replace: {
-            pkg: {
+            expath: {
                 src: ['expath-pkg.tmpl'],
-                dest: 'expath-pkg.xml',
+                dest:"expath-pkg.xml",
                 replacements: [
                     {
                         from: '@APPVERSION@',
@@ -57,6 +57,32 @@ module.exports = function (grunt) {
                     {
                         from: '@APPNAME@',
                         to: '<%= xar.name %>'
+                    },
+                    {
+                        from: '@APPDESCRIPTION@',
+                        to: '<%= xar.description %>'
+                    },
+                    {
+                        from: '@APPURL@',
+                        to: '<%= xar.url %>'
+                    }
+                ]
+            } ,
+            repo: {
+                src: ['repo.tmpl'],
+                dest:"repo.xml",
+                replacements: [
+                    {
+                        from: '@APPNAME@',
+                        to: '<%= xar.name %>'
+                    },
+                    {
+                        from: '@APPAUTHOR@',
+                        to: '<%= xar.author %>'
+                    },
+                    {
+                        from: '@APPLICENSE@',
+                        to: '<%= xar.license %>'
                     },
                     {
                         from: '@APPDESCRIPTION@',
@@ -76,7 +102,7 @@ module.exports = function (grunt) {
                 files: [
                     {expand: true,
                         cwd: './',
-                        src: ['modules/**','resources/img/**', 'templates/**', '*.xql', '*.xml', '*.txt', '*.ico', '*.html'],
+                        src: ['controller.xconf','modules/**','resources/img/**', 'templates/**', '*.xql', '*.xml', '*.txt', '*.ico', '*.html'],
                         dest: 'dist/'},
                     {expand: true,
                         cwd: './',
@@ -237,6 +263,7 @@ module.exports = function (grunt) {
                     '*.xml',
                     '*.xql',
                     '*.html',
+                    'data/**',
                     'modules/**',
                     'resources/**',
                     'templates/**',

@@ -2,6 +2,7 @@
   "name": "AppBlueprint",
   "version": "0.0.1",
   "description": "Blueprint for building eXistdb xar applications",
+  "url":"http://exist-db.org/apps",
   "main": "resources/js/app.js",
   "directories": {
     "doc": "doc"
@@ -9,7 +10,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "John Doe",
   "license": "BSD-2-Clause",
   "devDependencies": {
     "grunt": "~0.4.4",

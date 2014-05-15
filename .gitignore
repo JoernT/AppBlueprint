@@ -4,3 +4,5 @@ dist/*
 expath-pkg.xml
 components/*
 node_modules/*
+resources/js/app.min.js
+resources/css/tidy.css
