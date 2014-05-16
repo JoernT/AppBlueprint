@@ -307,7 +307,6 @@ module.exports = function (grunt) {
         'clean',
         'replace',
         'copy',
-        'imagemin',
         'uglify',
         'less:production',
         'concat',
