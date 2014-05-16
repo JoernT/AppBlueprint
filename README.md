@@ -27,7 +27,7 @@ Features:
 * removal of unused CSS
 * CSS minification (single file output)
 * JS concatenation and minification (single file output)
-* Image optimization for png images
+* Image optimization for png images (see remarks further down)
 * Dependency management for the components of your site/app
 * creation of optimized and non-optimized .xar files
 
@@ -81,6 +81,16 @@ Task | Description |
 `dist`| creates a fully-optimized version of the .xar application
 
 If you are seeking detail information about the single targets please refer to `gruntfile.js` for inline documentation.
+
+## Image Optimization
+
+The image optimization does NOT occur automatically during creation of a dist. Main reason is that the process can be slow if you have more than a handful of images which slows down the build process too much. Furthermore in some cases it may happen that images get corrupted by the optimizer and are not usable any more.
+
+Therefore image optimization should be run manually with
+
+`grunt imagemin`
+
+Copy the results in an appropriate folder and put it under version control. Usually it's not necessary to optimize images over and over again so this seems a reasonable solution.
 
 ## Customization
 
