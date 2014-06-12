@@ -102,7 +102,7 @@ module.exports = function (grunt) {
                 files: [
                     {expand: true,
                         cwd: './',
-                        src: ['controller.xconf','modules/**','resources/img/**', 'templates/**', '*.xql', '*.xml', '*.txt', '*.ico', '*.html'],
+                        src: ['controller.xconf','modules/**','resources/img/**', 'templates/**', '*.xql', '*.xml', '*.txt', '*.ico', '*.html','*.xhtml'],
                         dest: 'dist/'},
                     {expand: true,
                         cwd: './',
@@ -263,6 +263,7 @@ module.exports = function (grunt) {
                     '*.xml',
                     '*.xql',
                     '*.html',
+                    '*.xhtml',
                     'data/**',
                     'modules/**',
                     'resources/**',
