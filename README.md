@@ -41,7 +41,9 @@ All commands have to be executed in the root of your project.
 #### 1. install nodeJS
 Refer to their homepage for a OS-specific installer for your system.
 
-#### 2. initialize Grunt
+#### 2. initialize dependencies
+
+Will read package.json and load the listed dependencies.
 
 ** Note: **
 Grunt will install all tools needed for development - runtime dependencies of your website or app will be handled by bower (see below).
@@ -54,6 +56,13 @@ sudo might be needed on some systems like OSX. This will download and setup the 
 
 Note: 
 watch your console for errors during `npm install` to ensure you get a working installation. Sometimes administrator rights are needed for a correct install.
+
+##### Grunt-cli
+
+If you have never used Grunt before you have to install the command-line interface for Grunt (Grunt-cli).
+
+Run
+`(sudo) npm install grunt-cli -g
 
 
 #### 3. initialize Bower
