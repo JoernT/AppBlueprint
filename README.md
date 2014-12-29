@@ -31,6 +31,9 @@ Features:
 * Dependency management for the components of your site/app
 * creation of optimized and non-optimized .xar files
 
+## Preparation
+
+Download AppBlueprint by hitting the 'Download Zip' Button on this page and save it to a directory on your disk. Unpack it and start working.
 
 ## Installation
 
@@ -77,6 +80,9 @@ This will download the dependencies listed in bower.json - typically the compone
 
 NOTE: if for some reason your grunt tasks are not working as expected it sometimes helps to completely re-install all libs listed in package.json. For this delete your 'node_modules' directory and run `npm install` again.
 
+## Adapt to your needs
+
+In order to use AppBlueprint for your project you'll need to edit package.json and adapt it for your application. You'll want to change at least the 'name','description' and 'author' fields. The entries should be pretty self-explaining.
 
 ## Grunt command reference
 
