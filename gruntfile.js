@@ -275,12 +275,12 @@ module.exports = function (grunt) {
                     'components/jquery/dist/**',
                     'components/snap.svg/dist/**'
                 ],
-                dest: 'build/<%=xar.name%>-<%=xar.version%>.zip'
+                dest: 'build/<%=xar.name%>-<%=xar.version%>.xar'
             },
             production: {
                 cwd: 'dist/',
                 src: ['dist/**'],
-                dest: 'build/<%=xar.name%>-<%=xar.version%>.min.zip'
+                dest: 'build/<%=xar.name%>-<%=xar.version%>.min.xar'
             }
         },
 
