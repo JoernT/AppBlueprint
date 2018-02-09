@@ -1,3 +1,4 @@
+*** This repo is rather outdated and has been replaced by 'App Template'.***
 # eXistdb App Blueprint
 
 App Blueprint serves as a template for building [EXPath Application Packages](http://exist-db.org/exist/apps/doc/repo.xml) (".xar" applications) for eXistdb with modern web tooling.
